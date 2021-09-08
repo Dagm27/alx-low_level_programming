@@ -1,20 +1,20 @@
 #include "main.h"
-
 /**
-  *main - print _putchar
-  *
-  *Return: Always (0)
-  *
-  */
+ * main - Prints Holberton as a message.
+ *
+ * Return: Always 0 (Success)
+ */
+
 int main(void)
 {
-	char c[8] = "_putchar";
+	char c[] = "_putchar";
 	int i;
 
-	for(i = 0; i < 8; i++){
+
+	for (i = 0; i < 8; i++)
+	{
 		_putchar(c[i]);
 	}
 	_putchar('\n');
-	
 	return (0);
 }
