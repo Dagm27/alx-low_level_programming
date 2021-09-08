@@ -1,24 +1,13 @@
-#include "main.h"
+#include <unistd.h>
 
 /**
- * main - This entry point
+ * _putchar - writes the character c to stdout
+ * @c: The character to print
  *
- * Return: On success,  always 0
- *
- * Description: This is used to print
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
  */
-
-int main(void)
+int _putchar(char c)
 {
-	char hol_sch[] = {'_', 'p', 'u', 't', 'c', 'h', 'a', 'r', '\n'};
-	int length, count = 0;
-
-	length = sizeof(hol_sch) / sizeof(hol_sch[0]);
-
-	for (; count < length; count++)
-	{
-		_putchar(hol_sch[count]);
-	}
-
-	return (0);
+	return (write(1, &c, 1));
 }
