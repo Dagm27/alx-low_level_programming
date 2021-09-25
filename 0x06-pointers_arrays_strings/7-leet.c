@@ -2,17 +2,26 @@
 #include <stdio.h>
 
 /**
- * main - check the code for ALX School students.
- *
- * Return: Always 0.
- */
-int main(void)
+* leet - Entry point
+* @string: string
+* Return: Always 0 (Success)
+*/
+char *leet(char *string)
 {
-    char s[] = "Expect the best. Prepare for the worst. Capitalize on what comes.\n";
-    char *p;
+	char (*letters) = "AEOTL",
+	(*numbers) = "43071",
+	current_upper,
+	current_lower,
+	current_letter;
+	int i, j;
 
-    p = leet(s);
-    printf("%s", p);
-    printf("%s", s);
-    return (0);
-}
+	for (i = 0; *(string + i) != '\0'; i++)
+		for (j = 0; *(letters + j) != '\0'; j++)
+		{
+			current_upper = *(letters + j);
+			current_lower = *(letters + j) + 32;
+			current_letter = *(string + i);
+			if (current_letter == current_upper || current_letter == current_lower)
+				*(string + i) = *(numbers + j);
+		}
+
