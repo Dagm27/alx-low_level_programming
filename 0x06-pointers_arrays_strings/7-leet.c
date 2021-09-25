@@ -24,4 +24,5 @@ char *leet(char *string)
 			if (current_letter == current_upper || current_letter == current_lower)
 				*(string + i) = *(numbers + j);
 		}
-
+	return (string);
+}
