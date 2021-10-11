@@ -1,9 +1,9 @@
-#include "main.h"
+#include "holberton.h"
 #include <stdlib.h>
 /**
   *create_array - creates an arry for chars
   *@size: size of the array
-  @c: the char to fill array
+  *@c: the char to fill array
   *
   *Return: array
   */
@@ -17,7 +17,7 @@ char *create_array(unsigned int size, char c)
 
 	s = malloc(size * sizeof(char));
 
-	if(s == NULL)
+	if (s == NULL)
 		return (NULL);
 
 	for (i = 0; i < size; i++)
