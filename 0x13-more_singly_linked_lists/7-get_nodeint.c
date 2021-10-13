@@ -2,7 +2,7 @@
 #include "lists.h"
 #include <stdio.h>
 /**
-  * get_nodeint_at_index - 
+  * get_nodeint_at_index - returns nth node of a listint_t 
   * @head: head of linked list
   * @index: index of the node starting from 0
   *
